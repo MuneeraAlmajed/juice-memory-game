@@ -36,17 +36,29 @@ const timer = document.querySelector("#timer");
 
 
 /*-------------- Functions -------------*/
+//start game
+function startGame(){
+    console.log("the game is started");
+}
 
+//play again
+function playAgain(){
+    console.log("you can play again");
+}
+
+//make juice
+function makeJuice(){
+    console.log("Juice is made!");
+}
 /*----------- Event Listeners ----------*/
 
 
 // Start button
 startButton.addEventListener("click", startGame);
 
-
-// Submit button
-submitButton.addEventListener("click", submitAnswer);
-
-
-// Play Again button
+//play again button
 playAgainButton.addEventListener("click", playAgain);
+
+//make juice button or submit button
+submitButton.addEventListener("click", makeJuice);
+
