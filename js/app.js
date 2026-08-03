@@ -45,23 +45,15 @@ const timer = document.querySelector("#timer");
 function startGame(){
     console.log("the game is started");
 
+    fiveIngredients = [];
+    selectedIngredients = [];
+
+    //clear screen
+    ingContainer.innerHTML = "";
+    message.textContent = "";
+
     //create 5 random ingredients
     getRandomIng();
-
-    timeLeft = 5;
-    timer.textContent = "Time Left: "+timeLeft;
-
-    const countdown = setinterval(()=>{
-        timeLeft--;
-
-        timer.textContent="Time Left: "+ timeLeft;
-
-        if(timeLeft===0){
-            clearInterval(countdown);
-
-            ingContainer.innerHTML = "";
-        }
-    })
 
     //show ingredients for 5 seconds
     setTimeout(() => {
@@ -91,14 +83,14 @@ function playAgain(){
     console.log("you can play again");
 
 //clear the arrays
-selectedIngredients.innerHTML = "";
-correctIngredients.innerHTML = "";
+selectedIngredients.innerHTML = [];
+fiveIngredients = [];
 ingContainer.innerHTML = "";
+message.textContent = "";
+timer.textContent = "";
 
-ingContainer.innerHTML = "";
 
 }
-
 
 //make juice
 function makeJuice(){
@@ -133,7 +125,7 @@ const getRandomIng = () =>{
 //to choose 5 ingredients from the array randomly
     for(i = 0; i<5;i++){
     const randomIndex = Math.floor(Math.random() * ingredients.length);
-    randomIng = ingredients[randomIndex];
+    const randomIng = ingredients[randomIndex];
     console.log("ingredinets: " +randomIng);
 
     // check if ingredients is already selected
