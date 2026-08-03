@@ -13,7 +13,8 @@ const ingredients = [
     "Mango",
     "Watermelon",
     "Kiwi",
-    "Ice"
+    "Ice",
+    "water"
 ];
 
 
