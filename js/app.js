@@ -233,6 +233,18 @@ function addIngredient(ingredient) {
     juice.style.height = `${percentage}%`;
 
     juice.style.backgroundColor = ingredientColors[ingredient];
+
+    //mix colors
+    const colors = selectedIngredients.map(
+        ingredient => ingredientColors[ingredient]
+    );
+
+    //mix all color
+    juice.style.background = `linear-gradient(
+    to top,
+    ${colors.join(", ")}
+    )`;
+
 }
 
 
