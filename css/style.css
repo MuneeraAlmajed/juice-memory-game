@@ -1,20 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /*body*/
 body{
-    background-color: rgba(255, 228, 196, 0.25);
-    display: flexbox;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background:  rgba(255, 228, 196, 0.25);
+    color: #514848;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.background-fruits{
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.fruit{
+    position: absolute;
+    font-size: 100px;
+    opacity: 0.50;
+    animation: floatingFruit 8s ease-in-out infinite;
+}
+.fruit-1{
+    top: 8%;
+    left: 15%;
+    transform: rotate(20deg);
+}
+.fruit-2{
+    top: 15%;
+    right: 8%;
+    animation-delay: 2s;
+}
+.fruit-3{
+    bottom: 15%;
+    left: 15%;
+    animation-delay: 4s;
+    transform: rotate(90deg);
+}
+.fruit-4{
+    top: 50%;
+    left: 5%;
+    animation-delay: 1s;
+}
+.fruit-5{
+    bottom: 9%;
+    right: 9%;
+    animation-delay: 3s;
+}
+.fruit-6{
+    top:45%;
+    right: 20%;
+    transform: rotate(90deg);
+}
+@keyframes floatingFruit {
+    0%, 100%{
+        transform: translateY(0)
+        rotate(-5deg);
+    }
+    50%{
+        transform: 
+        translateY(-25px);
+        rotate: (10deg);
+    }
+}
+.start-button{
+    background-color: #e89491;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);;
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 15px;
+    color:#69424a;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+.start-button:hover{
+    background-color: aliceblue;
+    transition: 1s;
 }
 
 .play-again{
     background-color: #e89491;
-    border-radius: 60%;
-    height: 30px;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);;
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 15px;
+    color:#69424a;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+.play-again:hover{
+     background-color: aliceblue;
+     transition: 1s;
+}
+.make-button{
+    background-color: #e89491;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);;
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 15px;
+    color:#69424a;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+.make-button:hover{
+    background-color: aliceblue;
+    transition: 1s;
+}
+
+/*game*/
+.game{
+    width: 100%;
+    max-width: 900px;
+    min-height:60vh;
+    padding: 45px;
+    position: relative;
+    text-align: center;
+    background:  rgba(255,255,255,0.75);
+    border: 2px solid rgba(255,255,255,0.8);
+    border-radius: 40px;
+    box-shadow: 0 30px 80px;
+    backdrop-filter: blur(20px);
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    font-style: italic;
+    color:#e89491
+}
+.logo-icon{
+    font-size: 80px;
+    animation: logoBounce 2s infinite;
+}
+@keyframes logoBounce {
+    0%,100%{
+        transform:rotate(-5deg)
+    }
+    50%{transform: rotate(10deg)
+        translateY(-4px);
+    }
     
 }
-/* INGREDIENT CARDS */
 
+/*title*/
+h1{
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: normal;
+    color: #845252;
+}
+h2{
+    margin-top: 25px;
+    font-size: 45px;
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+    color: #845252;
+}
+.section-description{
+    margin-top: 20px;
+    font-size: 25px;
+    color: #8b7b7b;
+}
+#instructions{
+    margin-top: 20px;
+    font-size: 25px;
+    color: #8b7b7b;
+}
+#timer{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 50px;
+    background: #e89491;
+    color: #69424a;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
+}
+#timer:hover{
+    background-color: aliceblue;
+    transition: 1s;
+}
+/* INGREDIENT CARDS */
 .ingredients-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:100px 100px ;
     gap: 15px;
     max-width: 750px;
     margin: auto;
@@ -120,6 +315,9 @@ body{
     border-radius: 0 0 45px 45px;
     transition: height 0.8s ease, background 1s ease;
 }
+.juice-area{
+    margin-bottom: 40px;
+}
 
 /* INGREDIENTS IN CUP */
 #ingredients-in-cup {
@@ -212,4 +410,14 @@ body{
         transform: translateY(-120px);
         opacity: 0;
     }
+}
+
+#message.message{
+    margin-top: 20px;
+    font-size: 30px;
+    color:#5d4949;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 2px;
+    max-width: auto;
 }
