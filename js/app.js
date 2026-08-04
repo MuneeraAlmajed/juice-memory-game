@@ -16,19 +16,19 @@ const ingredients = [
 ];
 
 const ingredientColors = {
-    Orange: "orange",
-    Strawberry: "red",
-    Apple: "red",
-    Banana: "yellow",
-    Blueberry: "blue",
+    Orange: "#ed8a43",
+    Strawberry: "#e04433",
+    Apple: "#CCE2CB",
+    Banana: "#FFFFB5",
+    Blueberry: "#50358f",
     Honey: "gold",
-    Lemon: "yellow",
-    Milk: "white",
-    Mango: "orange",
-    Watermelon: "red",
-    Kiwi: "green",
+    Lemon: "#f5f500",
+    Milk: "#fcf0f0",
+    Mango: "#FFC8A2",
+    Watermelon: "#f79d93",
+    Kiwi: "#97C1A9",
     Ice: "lightblue",
-    water: "lightblue"
+    water: "#ABDEE6"
 };
 
 
@@ -223,7 +223,7 @@ function addIngredient(ingredient) {
 
     ingredientElement.classList.add("ingredient-in-cup");
 
-    ingredientElement.textContent = ingredient;
+    //ingredientElement.textContent = ingredient;
     ingredientElement.style.color = "black";
     ingredientElement.style.backgroundColor = ingredientColors[ingredient];
     ingredientsInCup.appendChild(ingredientElement);
