@@ -1,3 +1,15 @@
+/*body*/
+body{
+    background-color: rgba(255, 228, 196, 0.25);
+    display: flexbox;
+}
+
+.play-again{
+    background-color: #e89491;
+    border-radius: 60%;
+    height: 30px;
+    
+}
 /* INGREDIENT CARDS */
 
 .ingredients-grid {
@@ -20,9 +32,6 @@
     box-shadow: 0 5px 15px rgba(100, 80, 80, 0.12);
 }
 
-.ingredients-grid button:hover {
-    transform: translateY(-5px);
-}
 
 
 /* FRUIT EMOJIS */
