@@ -1,38 +1,206 @@
-#cup {
-    width: 150px;
-    height: 220px;
-    border: 4px solid #333;
-    border-radius: 10px 10px 40px 40px;
-    position: relative;
-    overflow: hidden;
-    margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.3);
+/* INGREDIENT CARDS */
+
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 15px;
+    max-width: 750px;
+    margin: auto;
 }
 
-/* Juice inside the cup */
-#juice {
+.ingredients-grid button {
+    height: 120px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    color: #6d5e5e;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(100, 80, 80, 0.12);
+}
+
+.ingredients-grid button:hover {
+    transform: translateY(-5px);
+}
+
+
+/* FRUIT EMOJIS */
+.ingredients-grid button::before {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+#Orange::before {
+    content: "🍊";
+}
+#Strawberry::before {
+    content: "🍓";
+}
+#Apple::before {
+    content: "🍎";
+}
+#Banana::before {
+    content: "🍌";
+}
+#Blueberry::before {
+    content: "🫐";
+}
+#Honey::before {
+    content: "🍯";
+}
+#Lemon::before {
+    content: "🍋";
+}
+#Milk::before {
+    content: "🥛";
+}
+#Mango::before {
+    content: "🥭";
+}
+#Watermelon::before {
+    content: "🍉";
+}
+#Kiwi::before {
+    content: "🥝";
+}
+#Ice::before {
+    content: "🧊";
+}
+#water::before {
+    content: "💧";
+}
+/* CUP */
+.glass-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+.glass {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid white;
+    border-top: none;
+    border-radius: 10px 10px 50px 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 25px rgba(80, 70, 80, 0.15);
+}
+
+/* STRAW */
+.straw {
+    position: absolute;
+    width: 12px;
+    height: 170px;
+    background-color: #e89491;
+    border-radius: 10px;
+    top: -40px;
+    margin-right: 90px;
+}
+
+/* JUICE */
+.juice {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 0%;
-    background: orange;
-    transition: height 0.5s ease;
+    overflow: hidden;
+    border-radius: 0 0 45px 45px;
+    transition: height 0.8s ease, background 1s ease;
 }
 
-/* Ingredients */
+/* INGREDIENTS IN CUP */
 #ingredients-in-cup {
     position: absolute;
-    bottom: 10px;
-    left: 0;
+    bottom: 0;
     width: 100%;
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-    z-index: 2;
+    flex-direction: column-reverse;
+    align-items: center;
 }
 
 .ingredient-in-cup {
-    font-size: 25px;
+    width: 90%;
+    height: 18px;
+    margin-bottom: 2px;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: drop 0.5s ease;
+}
+
+/* INGREDIENT ANIMATION */
+@keyframes drop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* GLASS SHINE */
+.glass-highlight {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 12px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* GLASS SHADOW */
+.glass-shadow {
+    width: 150px;
+    height: 15px;
+    margin-left: -156px;
+    margin-top: 150px;
+    border-radius: 50%;
+    background-color: rgba(80, 60, 70, 0.15);
+}
+
+/* BUBBLES */
+.bubble {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    animation: bubbles 3s infinite;
+}
+
+.bubble-1 {
+    left: 25%;
+    bottom: 10%;
+}
+.bubble-2 {
+    left: 50%;
+    bottom: 20%;
+    animation-delay: 1s;
+}
+.bubble-3 {
+    left: 70%;
+    bottom: 15%;
+    animation-delay: 2s;
+}
+/* BUBBLE ANIMATION */
+@keyframes bubbles {
+
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120px);
+        opacity: 0;
+    }
 }

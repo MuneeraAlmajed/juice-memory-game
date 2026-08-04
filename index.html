@@ -3,34 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juice Memory Game</title>
+    <title>Juice Memory Game 🍹</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/app.js" defer></script>
 </head>
-<body>
-    <header>
-        <h1>Juice Memory Game</h1>
-        <p id="instructions"><b>How to play?</b></p>
-        <p>- memorize the ingredients, you have only 5s!</p>
-        <p>- select the correct and in order ingredients before the time runs out!</p>
-        <p id="memory">Memorize the ingredients!</p>
-    </header>
 
-    <main>
-        <p id="instructions"></p>
-        <button id="start-btn">Start the Game</button>
-        <p id="timer"></p>
-        <p id= "ingredients"></p>
-        <p id="message"></p>
-        <button id="play-again-btn">Clear</button>
-        <button id="submit-btn">Make Juice</button>
-        <p id= "player-answer"></p>
-        <p id="correct-answer"></p>
-        <div id="cup">
-            <div id="juice"></div>
-            <div id="ingredients-in-cup"></div>
+<body>
+    <!--background-->
+    <div class="background-fruits">
+        <span class="fruit fruit-1">🍓</span>
+        <span class="fruit fruit-2">🍊</span>
+        <span class="fruit fruit-3">🥝</span>
+        <span class="fruit fruit-4">🍋</span>
+        <span class="fruit fruit-5">🫐</span>
+        <span class="fruit fruit-6">🍉</span>
+    </div>
+
+    <main class="game">
+        <header class="game-header">
+            <div class="logo">
+                <span class="logo-icon">🍹</span>
+                <span>Juice Memory Game</span>
+            </div>
+            <h1>
+                Create Your<span>Perfect Blend</span>
+            </h1>
+            <p id="instructions">
+                Memorize the secret recipe,
+                then recreate it!
+            </p>
+            <div id="timer">Ready?</div>
+        </header>
+
+        <!-- Start Game -->
+        <button id="start-btn" class="start-button">
+            <span>🍓</span>Start Game<span>🍊</span>
+        </button>
+
+        <!-- Ingredients -->
+        <section class="ingredients-area">
+            <div class="section-header">
+                <div class="decorative-line"></div>
+                <h2>
+                    Pick Your Ingredients
+                </h2>
+                <div class="decorative-line"></div>
+            </div>
+
+            <p class="section-description">Choose the ingredients you remember</p>
+            <div id="ingredients" class="ingredients-grid"></div>
+        </section>
+
+        <!-- Juice Area -->
+        <section class="juice-area">
+            <div class="section-header">
+                <div class="decorative-line"></div>
+                <h2>
+                    Your Juice
+                </h2>
+                <div class="decorative-line"></div>
+            </div>
+
+            <!-- Glass -->
+            <div class="glass-container">
+                <div class="straw"></div>
+                <div class="glass">
+                    <!-- Juice -->
+                    <div id="juice" class="juice">
+                        <!-- Ingredients -->
+                        <div
+                            id="ingredients-in-cup"
+                        ></div>
+                        <!-- Bubbles -->
+                        <div class="bubble bubble-1"></div>
+                        <div class="bubble bubble-2"></div>
+                        <div class="bubble bubble-3"></div>
+                    </div>
+
+                    <!-- Glass Shine -->
+                    <div class="glass-highlight"></div>
+                </div>
+
+                <!-- Glass Shadow -->
+                <div class="glass-shadow"></div>
+            </div>
+        </section>
+
+        <!-- Make Juice -->
+        <button id="submit-btn" class="make-button">
+            <span class="button-icon"></span>
+            Make My Juice
+            <span class="sparkle"></span>
+        </button>
+        <!-- Game Message -->
+        <div id="message" class="message"></div>
+        <!-- Answers -->
+        <div class="answers">
+            <p id="player-answer"></p>
+            <p id="correct-answer"></p>
         </div>
+
+        <!-- Play Again -->
+        <button id="play-again-btn" class="play-again">
+            ↻
+            Play Again
+        </button>
     </main>
-    
 </body>
 </html>
