@@ -18,7 +18,7 @@ const ingredients = [
 const ingredientColors = {
     Orange: "#ed8a43",
     Strawberry: "#e04433",
-    Apple: "#CCE2CB",
+    Apple: "red",
     Banana: "#FFFFB5",
     Blueberry: "#50358f",
     Honey: "gold",
@@ -39,7 +39,6 @@ let random;
 let fiveIngredients =[];
 let correctIngredients = [];
 let selectedIngredients = [];
-let matchResult; //win or lose
 let timeLeft = 5;
 
 
@@ -52,13 +51,16 @@ const playAgainButton = document.querySelector("#play-again-btn");
 const instructions = document.querySelector("#instructions");
 const message = document.querySelector("#message");
 const timer = document.querySelector("#timer");
-const playerAnswer = document.querySelector("#player-answer");
-const correctAnswer = document.querySelector("#correct-answer");
 const juice = document.querySelector("#juice");
 const ingredientsInCup = document.querySelector("#ingredients-in-cup");
+const ingredientsArea = document.querySelector(".ingredients-area");
+const juiceArea = document.querySelector(".juice-area");
+const gameHeader = document.querySelector(".game-header");
 
 
 /*-------------- Functions -------------*/
+    playAgainButton.style.display= "none";
+    submitButton.style.display="none";
 
 //start game
 function startGame(){
@@ -67,11 +69,12 @@ function startGame(){
     fiveIngredients = [];
     selectedIngredients = [];
 
+    playAgainButton.style.display = "none";
+    submitButton.style.display = "inline-block";
+
     //clear screen
     ingContainer.innerHTML = "";
     message.textContent = "";
-    playerAnswer.textContent = "";
-    correctAnswer.textContent = "";
     
     //reset timer
     timeLeft = 5;
@@ -93,7 +96,7 @@ function startGame(){
         if(timeLeft === 0){
             clearInterval(countdown);
             ingContainer.innerHTML = "";
-            message.textContent = "Choose your ingredients!";
+            
         }
     }, 1000)
 
@@ -129,45 +132,80 @@ function startGame(){
 function playAgain(){
     console.log("you can play again");
 
-//clear 
-selectedIngredients = [];
-fiveIngredients = [];
-ingContainer.innerHTML = "";
-message.textContent = "";
-timeLeft= 5;
-timer.textContent = "";
-ingredientsInCup.innerHTML = "";
-juice.style.height = "0%";
+    // Clear previous game
+    selectedIngredients = [];
+    fiveIngredients = [];
 
+    ingContainer.innerHTML = "";
+    message.textContent = "";
+    timeLeft = 5;
+    timer.textContent = "";
+    ingredientsInCup.innerHTML = "";
+    juice.style.height = "0%";
+
+    // Show everything again
+    startButton.style.display = "inline-block";
+    ingredientsArea.style.display = "block";
+    submitButton.style.display = "inline-block";
+    timer.style.display = "inline-block";
+    juiceArea.style.display = "block";
 }
 
 //make juice
 function makeJuice(){
     console.log("Juice is made!");
 
-    console.log("correct answer: ",fiveIngredients);
-    console.log("player answer: ",selectedIngredients);
 
-    const isCorrect = fiveIngredients.length === selectedIngredients.length && fiveIngredients.every(ingredient => selectedIngredients.includes(ingredient));
+    const isCorrect =
+        fiveIngredients.length === selectedIngredients.length &&
+        fiveIngredients.every(ingredient =>
+            selectedIngredients.includes(ingredient)
+        );
 
+    // Show win or lose message
     if(isCorrect){
         message.innerHTML = `
-        You win!
-        <br>
-        Your ingredients: ${selectedIngredients.join(", ")}<br>
-        Correct ingredients: ${fiveIngredients.join(", ")}
+            🍓 Perfect Blend! You're a Juice Genius!
+            <br><br>
+            Your Selected Ingredients:
+            <br>
+            ${selectedIngredients.join(", ")}
+            <br><br>
+            Correct Ingredients:
+            <br>
+            ${fiveIngredients.join(", ")}
         `;
     }else{
         message.innerHTML = `
-        You lose!
-        <br>
-        Your ingredients: ${selectedIngredients.join(", ")}<br>
-        Correct ingredients: ${fiveIngredients.join(", ")}
+            🥴 Uh-Oh… Who Let You Cook?!
+            <br><br>
+            Your Selected Ingredients:
+            <br>
+            ${selectedIngredients.join(", ")}
+            <br><br>
+            Correct Ingredients:
+            <br>
+            ${fiveIngredients.join(", ")}
         `;
     }
-    timer.textContent = "";
-    ingContainer.innerHTML="";
 
+    // Hide everything except the glass and result
+    startButton.style.display = "none";
+    ingredientsArea.style.display = "none";
+    submitButton.style.display = "none";
+    timer.style.display = "none";
+
+    // Keep the glass visible
+    juiceArea.style.display = "block";
+
+    // Show result
+    message.style.display = "block";
+
+    //show pplay agin button
+    playAgainButton.style.display = "inline-block";
+
+
+    console.log("Result screen displayed!");
 }
 
 //player choice
@@ -214,7 +252,7 @@ const getRandomIng = () =>{
         
     ingContainer.appendChild(ingButton);
     }
-    console.log("correct answer: ", fiveIngredients);
+    
 }
 
 //cup

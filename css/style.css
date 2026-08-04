@@ -7,12 +7,12 @@
 /*body*/
 body{
     min-height: 100vh;
-    padding: 40px 20px;
+    padding: 30px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background:  rgba(255, 228, 196, 0.25);
+    background: rgba(255, 228, 196, 0.25);
     color: #514848;
     overflow-x: hidden;
     position: relative;
@@ -32,60 +32,70 @@ body{
     opacity: 0.50;
     animation: floatingFruit 8s ease-in-out infinite;
 }
+
 .fruit-1{
     top: 8%;
     left: 15%;
     transform: rotate(20deg);
 }
+
 .fruit-2{
     top: 15%;
     right: 8%;
     animation-delay: 2s;
 }
+
 .fruit-3{
     bottom: 15%;
     left: 15%;
     animation-delay: 4s;
     transform: rotate(90deg);
 }
+
 .fruit-4{
     top: 50%;
     left: 5%;
     animation-delay: 1s;
 }
+
 .fruit-5{
     bottom: 9%;
     right: 9%;
     animation-delay: 3s;
 }
+
 .fruit-6{
-    top:45%;
+    top: 45%;
     right: 20%;
     transform: rotate(90deg);
 }
+
 @keyframes floatingFruit {
     0%, 100%{
-        transform: translateY(0)
-        rotate(-5deg);
+        transform: translateY(0) rotate(-5deg);
     }
+
     50%{
-        transform: 
-        translateY(-25px);
-        rotate: (10deg);
+        transform: translateY(-25px) rotate(10deg);
     }
 }
+
+
+/* BUTTONS */
 .start-button{
     background-color: #e89491;
     border-radius: 50px;
-    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);;
+    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
     margin-top: 30px;
     font-size: 20px;
-    padding: 15px;
-    color:#69424a;
+    padding: 15px 25px;
+    color: #69424a;
     font-weight: bold;
     letter-spacing: 2px;
     display: inline-block;
+    cursor: pointer;
 }
+
 .start-button:hover{
     background-color: aliceblue;
     transition: 1s;
@@ -94,51 +104,60 @@ body{
 .play-again{
     background-color: #e89491;
     border-radius: 50px;
-    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);;
+    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
     margin-top: 30px;
     font-size: 20px;
-    padding: 15px;
-    color:#69424a;
+    padding: 15px 25px;
+    color: #69424a;
     font-weight: bold;
     letter-spacing: 2px;
     display: inline-block;
+    cursor: pointer;
 }
+
 .play-again:hover{
-     background-color: aliceblue;
-     transition: 1s;
+    background-color: aliceblue;
+    transition: 1s;
 }
+
 .make-button{
     background-color: #e89491;
     border-radius: 50px;
-    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);;
+    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
     margin-top: 30px;
     font-size: 20px;
-    padding: 15px;
-    color:#69424a;
+    padding: 15px 25px;
+    color: #69424a;
     font-weight: bold;
     letter-spacing: 2px;
     display: inline-block;
+    cursor: pointer;
 }
+
 .make-button:hover{
     background-color: aliceblue;
     transition: 1s;
 }
 
-/*game*/
+
+/* GAME */
 .game{
-    width: 100%;
-    max-width: 900px;
-    min-height:60vh;
-    padding: 45px;
+    width: 95%;
+    max-width: 1200px;
+    min-height: 85vh;
+    padding: 50px 60px;
     position: relative;
     text-align: center;
-    background:  rgba(255,255,255,0.75);
+    background: rgba(255,255,255,0.75);
     border: 2px solid rgba(255,255,255,0.8);
     border-radius: 40px;
     box-shadow: 0 30px 80px;
     backdrop-filter: blur(20px);
+    z-index: 1;
 }
 
+
+/* LOGO */
 .logo{
     display: flex;
     justify-content: center;
@@ -148,29 +167,33 @@ body{
     font-weight: bolder;
     letter-spacing: 4px;
     font-style: italic;
-    color:#e89491
+    color: #e89491;
 }
+
 .logo-icon{
     font-size: 80px;
     animation: logoBounce 2s infinite;
 }
+
 @keyframes logoBounce {
     0%,100%{
-        transform:rotate(-5deg)
+        transform: rotate(-5deg);
     }
-    50%{transform: rotate(10deg)
-        translateY(-4px);
+
+    50%{
+        transform: rotate(10deg) translateY(-4px);
     }
-    
 }
 
-/*title*/
+
+/* TITLE */
 h1{
     margin-top: 20px;
     font-size: 50px;
     font-weight: normal;
     color: #845252;
 }
+
 h2{
     margin-top: 25px;
     font-size: 45px;
@@ -179,16 +202,19 @@ h2{
     font-display: swap;
     color: #845252;
 }
+
 .section-description{
     margin-top: 20px;
     font-size: 25px;
     color: #8b7b7b;
 }
+
 #instructions{
     margin-top: 20px;
     font-size: 25px;
     color: #8b7b7b;
 }
+
 #timer{
     margin-top: 20px;
     display: inline-block;
@@ -201,89 +227,113 @@ h2{
     letter-spacing: 3px;
     box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
 }
+
 #timer:hover{
     background-color: aliceblue;
     transition: 1s;
 }
+
+
 /* INGREDIENT CARDS */
 .ingredients-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:100px 100px ;
-    gap: 15px;
-    max-width: 750px;
-    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 140px);
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto 0;
 }
 
 .ingredients-grid button {
-    height: 120px;
+    height: 140px;
     border: none;
     border-radius: 20px;
     background-color: white;
     color: #6d5e5e;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(100, 80, 80, 0.12);
+    transition: 0.3s;
 }
 
+.ingredients-grid button:hover{
+    transform: translateY(-5px);
+}
 
 
 /* FRUIT EMOJIS */
 .ingredients-grid button::before {
     display: block;
-    font-size: 35px;
-    margin-bottom: 8px;
+    font-size: 45px;
+    margin-bottom: 10px;
 }
+
 #Orange::before {
     content: "🍊";
 }
+
 #Strawberry::before {
     content: "🍓";
 }
+
 #Apple::before {
     content: "🍎";
 }
+
 #Banana::before {
     content: "🍌";
 }
+
 #Blueberry::before {
     content: "🫐";
 }
+
 #Honey::before {
     content: "🍯";
 }
+
 #Lemon::before {
     content: "🍋";
 }
+
 #Milk::before {
     content: "🥛";
 }
+
 #Mango::before {
     content: "🥭";
 }
+
 #Watermelon::before {
     content: "🍉";
 }
+
 #Kiwi::before {
     content: "🥝";
 }
+
 #Ice::before {
     content: "🧊";
 }
+
 #water::before {
     content: "💧";
 }
+
+
 /* CUP */
 .glass-container {
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 80px;
 }
+
 .glass {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     position: relative;
     overflow: hidden;
     border: 4px solid white;
@@ -293,16 +343,18 @@ h2{
     box-shadow: 0 10px 25px rgba(80, 70, 80, 0.15);
 }
 
+
 /* STRAW */
 .straw {
     position: absolute;
     width: 12px;
-    height: 170px;
+    height: 200px;
     background-color: #e89491;
     border-radius: 10px;
-    top: -40px;
-    margin-right: 90px;
+    top: -50px;
+    margin-right: 110px;
 }
+
 
 /* JUICE */
 .juice {
@@ -315,9 +367,11 @@ h2{
     border-radius: 0 0 45px 45px;
     transition: height 0.8s ease, background 1s ease;
 }
+
 .juice-area{
     margin-bottom: 40px;
 }
+
 
 /* INGREDIENTS IN CUP */
 #ingredients-in-cup {
@@ -332,12 +386,13 @@ h2{
 
 .ingredient-in-cup {
     width: 90%;
-    height: 18px;
+    height: 22px;
     margin-bottom: 2px;
     border-radius: 50%;
     opacity: 0.8;
     animation: drop 0.5s ease;
 }
+
 
 /* INGREDIENT ANIMATION */
 @keyframes drop {
@@ -345,11 +400,13 @@ h2{
         transform: translateY(-50px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
     }
 }
+
 
 /* GLASS SHINE */
 .glass-highlight {
@@ -357,20 +414,22 @@ h2{
     top: 20px;
     left: 0px;
     width: 12px;
-    height: 120px;
+    height: 140px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+
 /* GLASS SHADOW */
 .glass-shadow {
-    width: 150px;
+    width: 180px;
     height: 15px;
-    margin-left: -156px;
-    margin-top: 150px;
+    margin-left: -186px;
+    margin-top: 180px;
     border-radius: 50%;
     background-color: rgba(80, 60, 70, 0.15);
 }
+
 
 /* BUBBLES */
 .bubble {
@@ -386,16 +445,20 @@ h2{
     left: 25%;
     bottom: 10%;
 }
+
 .bubble-2 {
     left: 50%;
     bottom: 20%;
     animation-delay: 1s;
 }
+
 .bubble-3 {
     left: 70%;
     bottom: 15%;
     animation-delay: 2s;
 }
+
+
 /* BUBBLE ANIMATION */
 @keyframes bubbles {
 
@@ -403,21 +466,72 @@ h2{
         transform: translateY(0);
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         transform: translateY(-120px);
         opacity: 0;
     }
 }
 
+
 #message.message{
     margin-top: 20px;
     font-size: 30px;
-    color:#5d4949;
+    color: #5d4949;
     font-weight: normal;
     font-style: italic;
     letter-spacing: 2px;
     max-width: auto;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+
+    body{
+        padding: 20px;
+    }
+
+    .game{
+        width: 100%;
+        padding: 35px 25px;
+    }
+
+    .ingredients-grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 600px){
+
+    .game{
+        padding: 30px 15px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 35px;
+    }
+
+    .section-description,
+    #instructions{
+        font-size: 20px;
+    }
+
+    .ingredients-grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .ingredients-grid button{
+        height: 120px;
+    }
 }
