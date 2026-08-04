@@ -1,6 +1,4 @@
 /*-------------- Constants -------------*/
-
-// Ingredients available in the game
 const ingredients = [
     "Orange",
     "Strawberry",
@@ -16,6 +14,22 @@ const ingredients = [
     "Ice",
     "water"
 ];
+
+const ingredientColors = {
+    Orange: "orange",
+    Strawberry: "red",
+    Apple: "red",
+    Banana: "yellow",
+    Blueberry: "blue",
+    Honey: "gold",
+    Lemon: "yellow",
+    Milk: "white",
+    Mango: "orange",
+    Watermelon: "red",
+    Kiwi: "green",
+    Ice: "lightblue",
+    water: "lightblue"
+};
 
 
 /*---------- Variables (state) ---------*/
@@ -40,6 +54,8 @@ const message = document.querySelector("#message");
 const timer = document.querySelector("#timer");
 const playerAnswer = document.querySelector("#player-answer");
 const correctAnswer = document.querySelector("#correct-answer");
+const juice = document.querySelector("#juice");
+const ingredientsInCup = document.querySelector("#ingredients-in-cup");
 
 
 /*-------------- Functions -------------*/
@@ -61,24 +77,29 @@ function startGame(){
     timeLeft = 5;
     timer.textContent = `Time Left: ${timeLeft}`;
 
+    //clear cup
+    ingredientsInCup.innerHTML="";
+    juice.style.height = "0%";
+
+
     //create 5 random ingredients
     getRandomIng();
 
     //countdown
-    const countdown = setInterval(() => {
-        timer.textContent = `Time left: ${timeLeft}`;
+    const countdown = setInterval(function() {
+        timeLeft--;
+        timer.textContent = `Time Left: ${timeLeft}`;
 
         if(timeLeft === 0){
             clearInterval(countdown);
             ingContainer.innerHTML = "";
-
-            timer.textContent = "Choose your ingredients!";
+            message.textContent = "Choose your ingredients!";
         }
-    })
+    }, 1000)
 
     //show ingredients for 5 seconds
     setTimeout(() => {
-
+        
         //hide them
         ingContainer.innerHTML = "";
 
@@ -108,13 +129,15 @@ function startGame(){
 function playAgain(){
     console.log("you can play again");
 
-//clear the arrays
-selectedIngredients.innerHTML = [];
+//clear 
+selectedIngredients = [];
 fiveIngredients = [];
 ingContainer.innerHTML = "";
 message.textContent = "";
+timeLeft= 5;
 timer.textContent = "";
-
+ingredientsInCup.innerHTML = "";
+juice.style.height = "0%";
 
 }
 
@@ -128,14 +151,23 @@ function makeJuice(){
     const isCorrect = fiveIngredients.length === selectedIngredients.length && fiveIngredients.every(ingredient => selectedIngredients.includes(ingredient));
 
     if(isCorrect){
-        message.textContent = `You win!
-        Your ingredients: ${selectedIngredients.join(",")}
-        Correct ingredients: ${fiveIngredients.join(",")}`;
+        message.innerHTML = `
+        You win!
+        <br>
+        Your ingredients: ${selectedIngredients.join(", ")}<br>
+        Correct ingredients: ${fiveIngredients.join(", ")}
+        `;
     }else{
-        message.textContent = `You lose!
-        Your ingredients: ${selectedIngredients.join(",")}
-        Correct ingredients: ${fiveIngredients.join(",")}`;
+        message.innerHTML = `
+        You lose!
+        <br>
+        Your ingredients: ${selectedIngredients.join(", ")}<br>
+        Correct ingredients: ${fiveIngredients.join(", ")}
+        `;
     }
+    timer.textContent = "";
+    ingContainer.innerHTML="";
+
 }
 
 //player choice
@@ -145,6 +177,9 @@ const getPlayerChoice = (event) => {
     //store player selection
     selectedIngredients.push(playerChoice);
 
+    //Add ingredient to cup
+    addIngredient(playerChoice);
+    
     console.log("player selected: ", playerChoice);
     console.log("All selected ingredient: ",selectedIngredients);
 };
@@ -182,6 +217,23 @@ const getRandomIng = () =>{
     console.log("correct answer: ", fiveIngredients);
 }
 
+//cup
+function addIngredient(ingredient) {
+    const ingredientElement = document.createElement("div");
+
+    ingredientElement.classList.add("ingredient-in-cup");
+
+    ingredientElement.textContent = ingredient;
+    ingredientElement.style.color = "black";
+    ingredientElement.style.backgroundColor = ingredientColors[ingredient];
+    ingredientsInCup.appendChild(ingredientElement);
+    // Increase juice level
+    const percentage = selectedIngredients.length * 15;
+
+    juice.style.height = `${percentage}%`;
+
+    juice.style.backgroundColor = ingredientColors[ingredient];
+}
 
 
 /*----------- Event Listeners ----------*/
