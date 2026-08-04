@@ -38,6 +38,8 @@ const playAgainButton = document.querySelector("#play-again-btn");
 const instructions = document.querySelector("#instructions");
 const message = document.querySelector("#message");
 const timer = document.querySelector("#timer");
+const playerAnswer = document.querySelector("#player-answer");
+const correctAnswer = document.querySelector("#correct-answer");
 
 
 /*-------------- Functions -------------*/
@@ -52,9 +54,27 @@ function startGame(){
     //clear screen
     ingContainer.innerHTML = "";
     message.textContent = "";
+    playerAnswer.textContent = "";
+    correctAnswer.textContent = "";
+    
+    //reset timer
+    timeLeft = 5;
+    timer.textContent = `Time Left: ${timeLeft}`;
 
     //create 5 random ingredients
     getRandomIng();
+
+    //countdown
+    const countdown = setInterval(() => {
+        timer.textContent = `Time left: ${timeLeft}`;
+
+        if(timeLeft === 0){
+            clearInterval(countdown);
+            ingContainer.innerHTML = "";
+
+            timer.textContent = "Choose your ingredients!";
+        }
+    })
 
     //show ingredients for 5 seconds
     setTimeout(() => {
@@ -76,7 +96,12 @@ function startGame(){
             ingContainer.appendChild(ingButton);
         }
         console.log("Choose your ingredients!");
+
     },5000);
+
+   
+
+
 }
 
 //play again
@@ -103,9 +128,13 @@ function makeJuice(){
     const isCorrect = fiveIngredients.length === selectedIngredients.length && fiveIngredients.every(ingredient => selectedIngredients.includes(ingredient));
 
     if(isCorrect){
-        message.textContent = "You win!";
+        message.textContent = `You win!
+        Your ingredients: ${selectedIngredients.join(",")}
+        Correct ingredients: ${fiveIngredients.join(",")}`;
     }else{
-        message.textContent = "You lose!";
+        message.textContent = `You lose!
+        Your ingredients: ${selectedIngredients.join(",")}
+        Correct ingredients: ${fiveIngredients.join(",")}`;
     }
 }
 
