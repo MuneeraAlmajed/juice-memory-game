@@ -56,11 +56,17 @@ const ingredientsInCup = document.querySelector("#ingredients-in-cup");
 const ingredientsArea = document.querySelector(".ingredients-area");
 const juiceArea = document.querySelector(".juice-area");
 const gameHeader = document.querySelector(".game-header");
+const secDes = document.querySelector(".section-description");
+const secHead = document.querySelector(".section-header");
+
+
 
 
 /*-------------- Functions -------------*/
     playAgainButton.style.display= "none";
     submitButton.style.display="none";
+    secDes.textContent = "";
+   
 
 //start game
 function startGame(){
@@ -71,6 +77,8 @@ function startGame(){
 
     playAgainButton.style.display = "none";
     submitButton.style.display = "inline-block";
+    secHead.style.display = " inline-block";
+
 
     //clear screen
     ingContainer.innerHTML = "";
@@ -306,6 +314,8 @@ const handleMove = (event) => {
 
     playerChoice = event.target.id;
     selectedIngredients.push(playerChoice);
+
+    event.target.classList.add("selected");
 
     console.log("player selected: ", playerChoice);
     console.log("All selected ingredient: ", selectedIngredients);

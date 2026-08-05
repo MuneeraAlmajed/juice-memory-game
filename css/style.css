@@ -262,6 +262,10 @@ h2{
 .ingredients-grid button:hover{
     transform: translateY(-5px);
 }
+.ingredients-grid button.selected{
+    background-color: #f8c8dc;
+    box-shadow: 0 0 15px rgba(232, 148, 145, 0.8);
+}
 
 
 /* FRUIT EMOJIS */
