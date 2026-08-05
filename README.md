@@ -1,5 +1,5 @@
 ## Screenshot/Logo: 
-![Juice Memory game Screenshot](images/juice%20memory%20game%20screenshot.png)
+![Juice Memory game Screenshot](./images/juice%20memory%20game%20screenshot.png)
 ## Juice Memory Game: 
 Juice Memory Game is a memory based-cooking game where players need to memorize a random juice recipe made of five ingredinents for 5 seconds, then the ingredinets will disappear and then the player must recretae the juice by selecting the correct ingredients and in correct order.
 

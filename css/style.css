@@ -87,7 +87,7 @@ body{
     border-radius: 50px;
     box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
     margin-top: 30px;
-    font-size: 30px;
+    font-size: 15px;
     padding: 15px 25px;
     color: #69424a;
     font-weight: bold;
@@ -125,8 +125,8 @@ body{
     border-radius: 50px;
     box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
     margin-top: 30px;
-    font-size: 30px;
-    padding: 15px 25px;
+    font-size: 20px;
+    padding: 15px;
     color: #69424a;
     font-weight: bold;
     letter-spacing: 2px;
@@ -189,14 +189,14 @@ body{
 /* TITLE */
 h1{
     margin-top: 20px;
-    font-size: 50px;
+    font-size: 15px;
     font-weight: normal;
     color: #845252;
 }
 
 h2{
     margin-top: 25px;
-    font-size: 45px;
+    font-size: 20px;
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -211,7 +211,7 @@ h2{
 
 #instructions{
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 15px;
     color: maroon;
 }
 
@@ -222,7 +222,7 @@ h2{
     border-radius: 50px;
     background: #ff8181;
     color: #69424a;
-    font-size: 30px;
+    font-size: 15px;
     font-weight: bold;
     letter-spacing: 3px;
     box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
@@ -237,13 +237,13 @@ h2{
 /* INGREDIENT CARDS */
 .ingredients-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 130px);
-    gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 140px);
+    gap: 10px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 100%;
     margin-top: 30px;
-    padding: 10px 10px 15px 25px;
+    padding: 10px;
 }
 
 .ingredients-grid button {
@@ -271,7 +271,7 @@ h2{
 /* FRUIT EMOJIS */
 .ingredients-grid button::before {
     display: block;
-    font-size: 70px;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
@@ -501,8 +501,8 @@ h2{
         padding: 10px;
     }
     .game{
-        width: 100%;
-        padding: 35px 25px;
+        width: 600px;
+        padding: 10px 15px;
     }
 
     .ingredients-grid{
