@@ -14,8 +14,17 @@
 5. The user shuold ***view a message*** indicating if he `loses` or `wins` the game
 6. As a user, after finishing the game I be should able to click ***"Play Again"*** button and re-play the game.
 
-## This Section to be updated later: 
-* Screenshot/Logo: A screenshot of your app or a logo.
+### How to play:
+1. Click the ***start game*** button.
+2. A random set of 5 ingredients will appear for ***5 seconds***.
+3. Memorize the ingredients and their **order**.
+4. Select the ingredients to recreate the juice.
+5. Click ***Make Juice!*** to check your answer
+6. You win if you choose the correct ingredients in the ***correct order***.
+
+
+## Screenshot/Logo: 
+![Juice Memory game Screenshot](images/juice%20memory%20game%20screenshot.png)
 * Your game's name: Include a description of your game and what it does. Background info about the game and why you chose it is a nice touch.
 * Getting started: Include a link to your deployed game and any instructions you deem important. This should also contain a link to your planning materials.
 * Attributions: This section should include links to any external resources (such as libraries or assets) you used to develop your application that require attribution. You can exclude this section if it does not apply to your application.

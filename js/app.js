@@ -115,7 +115,7 @@ function startGame(){
             ingButton.textContent = allIngredients;
             ingButton.id = allIngredients;
 
-            ingButton.addEventListener("click",getPlayerChoice);
+            ingButton.addEventListener("click",handleMove);
 
             ingContainer.appendChild(ingButton);
         }
@@ -139,16 +139,16 @@ function playAgain(){
     ingContainer.innerHTML = "";
     message.textContent = "";
     timeLeft = 5;
-    timer.textContent = "";
     ingredientsInCup.innerHTML = "";
     juice.style.height = "0%";
 
     // Show everything again
     startButton.style.display = "inline-block";
     ingredientsArea.style.display = "block";
-    submitButton.style.display = "inline-block";
-    timer.style.display = "inline-block";
+    timer.style.display = "none";
     juiceArea.style.display = "block";
+    playAgainButton.style.display = "none";
+    submitButton.style.display = "none;"
 }
 
 //make juice
@@ -158,8 +158,8 @@ function makeJuice(){
 
     const isCorrect =
         fiveIngredients.length === selectedIngredients.length &&
-        fiveIngredients.every(ingredient =>
-            selectedIngredients.includes(ingredient)
+        fiveIngredients.every((ingredient, index) =>
+           ingredient === selectedIngredients[index]
         );
 
     // Show win or lose message
@@ -247,7 +247,7 @@ const getRandomIng = () =>{
         ingButton.id = ing;
 
         //store player choice when clicked
-        ingButton.addEventListener("click",getPlayerChoice);
+        ingButton.addEventListener("click",handleMove);
 
         
     ingContainer.appendChild(ingButton);
@@ -284,6 +284,10 @@ function addIngredient(ingredient) {
     )`;
 
 }
+//render
+function render(){
+    addIngredient(playerChoice);
+}
 
 
 /*----------- Event Listeners ----------*/
@@ -297,6 +301,16 @@ playAgainButton.addEventListener("click", playAgain);
 //make juice button or submit button
 submitButton.addEventListener("click", makeJuice);
 
+//render
+const handleMove = (event) => {
 
+    playerChoice = event.target.id;
+    selectedIngredients.push(playerChoice);
 
+    console.log("player selected: ", playerChoice);
+    console.log("All selected ingredient: ", selectedIngredients);
+
+    
+    render();
+};
 

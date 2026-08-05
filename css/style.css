@@ -87,7 +87,7 @@ body{
     border-radius: 50px;
     box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
     margin-top: 30px;
-    font-size: 20px;
+    font-size: 30px;
     padding: 15px 25px;
     color: #69424a;
     font-weight: bold;
@@ -105,9 +105,9 @@ body{
     background-color: #e89491;
     border-radius: 50px;
     box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
-    margin-top: 30px;
-    font-size: 20px;
-    padding: 15px 25px;
+    margin-top: 135px;
+    font-size: 40px;
+    padding: 35px 90px;
     color: #69424a;
     font-weight: bold;
     letter-spacing: 2px;
@@ -125,7 +125,7 @@ body{
     border-radius: 50px;
     box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
     margin-top: 30px;
-    font-size: 20px;
+    font-size: 30px;
     padding: 15px 25px;
     color: #69424a;
     font-weight: bold;
@@ -211,18 +211,18 @@ h2{
 
 #instructions{
     margin-top: 20px;
-    font-size: 25px;
-    color: #8b7b7b;
+    font-size: 30px;
+    color: maroon;
 }
 
 #timer{
     margin-top: 20px;
     display: inline-block;
-    padding: 10px 25px;
+    padding: 15px 25px;
     border-radius: 50px;
-    background: #e89491;
+    background: #ff8181;
     color: #69424a;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
     letter-spacing: 3px;
     box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
@@ -238,11 +238,12 @@ h2{
 .ingredients-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 140px);
+    grid-template-rows: repeat(2, 130px);
     gap: 20px;
     width: 100%;
-    max-width: 900px;
-    margin: 30px auto 0;
+    max-width: 1000px;
+    margin-top: 30px;
+    padding: 10px 10px 15px 25px;
 }
 
 .ingredients-grid button {
@@ -251,7 +252,7 @@ h2{
     border-radius: 20px;
     background-color: white;
     color: #6d5e5e;
-    font-size: 16px;
+    font-size: 25px;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(100, 80, 80, 0.12);
@@ -266,12 +267,13 @@ h2{
 /* FRUIT EMOJIS */
 .ingredients-grid button::before {
     display: block;
-    font-size: 45px;
+    font-size: 70px;
     margin-bottom: 10px;
 }
 
 #Orange::before {
     content: "🍊";
+
 }
 
 #Strawberry::before {
@@ -480,7 +482,7 @@ h2{
 
 #message.message{
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 40px;
     color: #5d4949;
     font-weight: normal;
     font-style: italic;
@@ -491,11 +493,9 @@ h2{
 
 /* RESPONSIVE */
 @media (max-width: 900px){
-
     body{
-        padding: 20px;
+        padding: 10px;
     }
-
     .game{
         width: 100%;
         padding: 35px 25px;
