@@ -1,738 +1,442 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-
-/*body*/
 body{
-    min-height: 100vh;
-    padding: 30px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: rgba(255, 228, 196, 0.25);
-    color: #514848;
-    overflow-x: hidden;
-    position: relative;
+    min-height:100vh;
+    padding:30px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Trebuchet MS','Lucida Sans Unicode','Lucida Grande','Lucida Sans',Arial,sans-serif;
+    background:rgba(255,228,196,0.25);
+    color:#514848;
+    overflow-x:hidden;
 }
-
 .background-fruits{
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: 0;
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:0;
 }
-
 .fruit{
-    position: absolute;
-    font-size: 100px;
-    opacity: 0.50;
-    animation: floatingFruit 8s ease-in-out infinite;
+    position:absolute;
+    font-size:100px;
+    opacity:.45;
+    animation:floatingFruit 8s ease-in-out infinite;
 }
-
 .fruit-1{
-    top: 8%;
-    left: 15%;
-    transform: rotate(20deg);
+    top:8%;
+    left:15%;
 }
-
 .fruit-2{
-    top: 15%;
-    right: 8%;
-    animation-delay: 2s;
+    top:15%;
+    right:8%;
+    animation-delay:2s;
 }
-
 .fruit-3{
-    bottom: 15%;
-    left: 15%;
-    animation-delay: 4s;
-    transform: rotate(90deg);
+    bottom:15%;
+    left:15%;
+    animation-delay:4s;
 }
-
 .fruit-4{
-    top: 50%;
-    left: 5%;
-    animation-delay: 1s;
+    top:50%;
+    left:5%;
+    animation-delay:1s;
 }
-
 .fruit-5{
-    bottom: 9%;
-    right: 9%;
-    animation-delay: 3s;
+    bottom:10%;
+    right:10%;
+    animation-delay:3s;
 }
-
 .fruit-6{
-    top: 45%;
-    right: 20%;
-    transform: rotate(90deg);
+    top:45%;
+    right:20%;
 }
-
-@keyframes floatingFruit {
-    0%, 100%{
-        transform: translateY(0) rotate(-5deg);
-    }
-
-    50%{
-        transform: translateY(-25px) rotate(10deg);
-    }
-}
-
-
-/* BUTTONS */
-.start-button{
-    background-color: #e89491;
-    border-radius: 50px;
-    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
-    margin-top: 30px;
-    font-size: 15px;
-    padding: 15px 25px;
-    color: #69424a;
-    font-weight: bold;
-    letter-spacing: 2px;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.start-button:hover{
-    background-color: aliceblue;
-    transition: 1s;
-}
-
-.play-again{
-    background-color: #e89491;
-    border-radius: 50px;
-    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
-    margin-top: 135px;
-    font-size: 40px;
-    padding: 35px 90px;
-    color: #69424a;
-    font-weight: bold;
-    letter-spacing: 2px;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.play-again:hover{
-    background-color: aliceblue;
-    transition: 1s;
-}
-
-.make-button{
-    background-color: #e89491;
-    border-radius: 50px;
-    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
-    margin-top: 30px;
-    font-size: 30px;
-    padding: 15px 25px;
-    color: #69424a;
-    font-weight: bold;
-    letter-spacing: 2px;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.make-button:hover{
-    background-color: aliceblue;
-    transition: 1s;
-}
-
-
-/* GAME */
-.game{
-    width: 95%;
-    max-width: 1200px;
-    min-height: 85vh;
-    padding: 50px 60px;
-    position: relative;
-    text-align: center;
-    background: rgba(255,255,255,0.75);
-    border: 2px solid rgba(255,255,255,0.8);
-    border-radius: 40px;
-    box-shadow: 0 30px 80px;
-    backdrop-filter: blur(20px);
-    z-index: 1;
-}
-
-
-/* LOGO */
-.logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    font-size: 30px;
-    font-weight: bolder;
-    letter-spacing: 4px;
-    font-style: italic;
-    color: #e89491;
-}
-
-.logo-icon{
-    font-size: 80px;
-    animation: logoBounce 2s infinite;
-}
-
-@keyframes logoBounce {
+@keyframes floatingFruit{
     0%,100%{
-        transform: rotate(-5deg);
+        transform:translateY(0) rotate(-5deg);
     }
-
     50%{
-        transform: rotate(10deg) translateY(-4px);
+        transform:translateY(-25px) rotate(10deg);
     }
 }
-
-
-/* TITLE */
+.game{
+    width:95%;
+    max-width:1200px;
+    min-height:85vh;
+    padding:50px 60px;
+    position:relative;
+    text-align:center;
+    background:rgba(255,255,255,.75);
+    border:2px solid rgba(255,255,255,.8);
+    border-radius:40px;
+    box-shadow:0 30px 80px rgba(80,60,70,.25);
+    backdrop-filter:blur(20px);
+    z-index:1;
+}
+.logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    font-size:30px;
+    font-weight:bold;
+    letter-spacing:4px;
+    font-style:italic;
+    color:#e89491;
+}
+.logo-icon{
+    font-size:80px;
+    animation:logoBounce 2s infinite;
+}
+@keyframes logoBounce{
+    0%,100%{
+        transform:rotate(-5deg);
+    }
+    50%{
+        transform:rotate(10deg) translateY(-5px);
+    }
+}
 h1{
-    margin-top: 20px;
-    font-size: 15px;
-    font-weight: normal;
-    color: #845252;
+    margin-top:20px;
+    font-size:18px;
+    font-weight:normal;
+    color:#845252;
 }
-
 h2{
-    margin-top: 25px;
-    font-size: 20px;
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-    color: #845252;
+    margin-top:25px;
+    font-size:22px;
+    font-weight:normal;
+    font-style:italic;
+    color:#845252;
 }
-
 .section-description{
-    margin-top: 20px;
-    font-size: 25px;
-    color: #8b7b7b;
+    margin-top:20px;
+    font-size:25px;
+    color:#8b7b7b;
 }
-
 #instructions{
-    margin-top: 20px;
-    font-size: 15px;
-    color: maroon;
+    margin-top:20px;
+    font-size:15px;
+    color:maroon;
 }
-
+.start-button,.make-button,.play-again{
+    background:#e89491;
+    border:none;
+    border-radius:50px;
+    box-shadow:0 5px 20px rgba(249,8,104,.35);
+    color:#69424a;
+    font-weight:bold;
+    letter-spacing:2px;
+    cursor:pointer;
+    transition:.5s;
+}
+.start-button{
+    margin-top:30px;
+    padding:15px 25px;
+    font-size:15px;
+}
+.make-button{
+    margin-top:30px;
+    padding:15px 25px;
+    font-size:20px;
+}
+.play-again{
+    margin-top:50px;
+    padding:20px 50px;
+    font-size:25px;
+}
+.start-button:hover,.make-button:hover,.play-again:hover{
+    background:white;
+}
 #timer{
-    margin-top: 20px;
-    display: inline-block;
-    padding: 15px 25px;
-    border-radius: 50px;
-    background: #ff8181;
-    color: #69424a;
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
+    margin-top:20px;
+    display:inline-block;
+    padding:15px 25px;
+    border-radius:50px;
+    background:#ff8181;
+    color:#69424a;
+    font-size:15px;
+    font-weight:bold;
+    letter-spacing:3px;
+    box-shadow:0 5px 20px rgba(249,8,104,.35);
 }
-
-#timer:hover{
-    background-color: aliceblue;
-    transition: 1s;
+.ingredients-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:12px;
+    width:100%;
+    margin-top:30px;
+    padding:10px;
 }
-
-
-/* INGREDIENT CARDS */
-.ingredients-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 150px);
-    gap: 10px;
-    width: 100%;
-    max-width: 100%;
-    margin-top: 50px;
-    padding: 10px;
+.ingredients-grid button{
+    height:140px;
+    border:none;
+    border-radius:20px;
+    background:white;
+    color:#6d5e5e;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(100,80,80,.12);
+    transition:.3s;
 }
-
-.ingredients-grid button {
-    height: 140px;
-    border: none;
-    border-radius: 20px;
-    background-color: white;
-    color: #6d5e5e;
-    font-size: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(100, 80, 80, 0.12);
-    transition: 0.3s;
-}
-
 .ingredients-grid button:hover{
-    transform: translateY(-5px);
+    transform:translateY(-5px);
 }
 .ingredients-grid button.selected{
-    background-color: #f8c8dc;
-    box-shadow: 0 0 15px rgba(232, 148, 145, 0.8);
+    background:#f8c8dc;
+    box-shadow:0 0 15px rgba(232,148,145,.8);
 }
-
-
-/* FRUIT EMOJIS */
-.ingredients-grid button::before {
-    display: block;
-    font-size: 35px;
-    margin-bottom: 10px;
+.ingredients-grid button::before{
+    display:block;
+    font-size:40px;
+    margin-bottom:10px;
 }
-
-#Orange::before {
-    content: "🍊";
-
+#Orange::before{
+    content:"🍊";
 }
-
-#Strawberry::before {
-    content: "🍓";
+#Strawberry::before{
+    content:"🍓";
 }
-
-#Apple::before {
-    content: "🍎";
+#Apple::before{
+    content:"🍎";
 }
-
-#Banana::before {
-    content: "🍌";
+#Banana::before{
+    content:"🍌";
 }
-
-#Blueberry::before {
-    content: "🫐";
+#Blueberry::before{
+    content:"🫐";
 }
-
-#Honey::before {
-    content: "🍯";
+#Honey::before{
+    content:"🍯";
 }
-
-#Lemon::before {
-    content: "🍋";
+#Lemon::before{
+    content:"🍋";
 }
-
-#Milk::before {
-    content: "🥛";
+#Milk::before{
+    content:"🥛";
 }
-
-#Mango::before {
-    content: "🥭";
+#Mango::before{
+    content:"🥭";
 }
-
-#Watermelon::before {
-    content: "🍉";
+#Watermelon::before{
+    content:"🍉";
 }
-
-#Kiwi::before {
-    content: "🥝";
+#Kiwi::before{
+    content:"🥝";
 }
-
-#Ice::before {
-    content: "🧊";
+#Ice::before{
+    content:"🧊";
 }
-
-#water::before {
-    content: "💧";
+#water::before{
+    content:"💧";
 }
-
-
-/* CUP */
-.glass-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-}
-
-.glass {
-    width: 180px;
-    height: 180px;
-    position: relative;
-    overflow: hidden;
-    border: 4px solid white;
-    border-top: none;
-    border-radius: 10px 10px 50px 50px;
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 10px 25px rgba(80, 70, 80, 0.15);
-}
-
-
-/* STRAW */
-.straw {
-    position: absolute;
-    width: 12px;
-    height: 200px;
-    background-color: #e89491;
-    border-radius: 10px;
-    top: -50px;
-    margin-right: 110px;
-}
-
-
-/* JUICE */
-.juice {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0%;
-    overflow: hidden;
-    border-radius: 0 0 45px 45px;
-    transition: height 0.8s ease, background 1s ease;
-}
-
-.juice-area{
-    margin-bottom: 40px;
-}
-
-
-/* INGREDIENTS IN CUP */
-#ingredients-in-cup {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-}
-
-.ingredient-in-cup {
-    width: 90%;
-    height: 22px;
-    margin-bottom: 2px;
-    border-radius: 50%;
-    opacity: 0.8;
-    animation: drop 0.5s ease;
-}
-
-
-/* INGREDIENT ANIMATION */
-@keyframes drop {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-
-/* GLASS SHINE */
-.glass-highlight {
-    position: absolute;
-    top: 20px;
-    left: 0px;
-    width: 12px;
-    height: 140px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-
-/* GLASS SHADOW */
-.glass-shadow {
-    width: 180px;
-    height: 15px;
-    margin-left: -186px;
-    margin-top: 180px;
-    border-radius: 50%;
-    background-color: rgba(80, 60, 70, 0.15);
-}
-
-
-/* BUBBLES */
-.bubble {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.6);
-    animation: bubbles 3s infinite;
-}
-
-.bubble-1 {
-    left: 25%;
-    bottom: 10%;
-}
-
-.bubble-2 {
-    left: 50%;
-    bottom: 20%;
-    animation-delay: 1s;
-}
-
-.bubble-3 {
-    left: 70%;
-    bottom: 15%;
-    animation-delay: 2s;
-}
-
-
-/* BUBBLE ANIMATION */
-@keyframes bubbles {
-
-    0% {
-        transform: translateY(0);
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(-120px);
-        opacity: 0;
-    }
-}
-
-
 #message.message{
-    margin-top: 20px;
-    font-size: 40px;
-    color: #5d4949;
-    font-weight: normal;
-    font-style: italic;
-    letter-spacing: 2px;
-    max-width: auto;
+    margin-top:20px;
+    font-size:40px;
+    color:#5d4949;
+    font-style:italic;
+    letter-spacing:2px;
 }
-
-/* RESPONSIVE */
-
-@media (max-width: 900px){
-
+.glass-container{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    margin-top:80px;
+}
+.straw{
+    position:absolute;
+    width:12px;
+    height:200px;
+    background:#e89491;
+    border-radius:10px;
+    top:-50px;
+    margin-right:110px;
+}
+.glass{
+    width:180px;
+    height:180px;
+    position:relative;
+    overflow:hidden;
+    border:4px solid white;
+    border-top:none;
+    border-radius:10px 10px 50px 50px;
+    background:rgba(255,255,255,.3);
+    box-shadow:0 10px 25px rgba(80,70,80,.15);
+}
+.juice{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:0%;
+    overflow:hidden;
+    border-radius:0 0 45px 45px;
+    transition:height .8s ease,background 1s ease;
+}
+#ingredients-in-cup{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column-reverse;
+    align-items:center;
+}
+.ingredient-in-cup{
+    width:90%;
+    height:22px;
+    margin-bottom:2px;
+    border-radius:50%;
+    opacity:.8;
+    animation:drop .5s ease;
+}
+@keyframes drop{
+    from{
+        transform:translateY(-50px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+.glass-highlight{
+    position:absolute;
+    top:20px;
+    left:10px;
+    width:12px;
+    height:140px;
+    border-radius:50%;
+    background:rgba(255,255,255,.5);
+}
+.glass-shadow{
+    width:180px;
+    height:15px;
+    margin-left:-186px;
+    margin-top:180px;
+    border-radius:50%;
+    background:rgba(80,60,70,.15);
+}
+.bubble{
+    position:absolute;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:rgba(255,255,255,.6);
+    animation:bubbles 3s infinite;
+}
+.bubble-1{
+    left:25%;
+    bottom:10%;
+}
+.bubble-2{
+    left:50%;
+    bottom:20%;
+    animation-delay:1s;
+}
+.bubble-3{
+    left:70%;
+    bottom:15%;
+    animation-delay:2s;
+}
+@keyframes bubbles{
+    0%{
+        transform:translateY(0);
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-120px);
+        opacity:0;
+    }
+}
+@media(max-width:900px){
     body{
-        padding: 15px;
+        padding:15px;
     }
-
-
     .game{
-
-        width: 100%;
-        max-width: 700px;
-        min-height: auto;
-        padding: 30px 20px;
-
+        width:100%;
+        max-width:700px;
+        padding:30px 20px;
     }
-
-
     .ingredients-grid{
-
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
-        gap: 12px;
-
+        grid-template-columns:repeat(3,1fr);
     }
-
-
     .ingredients-grid button{
-
-        height: 120px;
-        font-size: 20px;
-
+        height:120px;
+        font-size:18px;
     }
-
-
     .fruit{
-
-        font-size: 70px;
-
+        font-size:70px;
     }
-
-
-    .make-button{
-
-        font-size: 20px;
-        padding: 15px 25px;
-
-    }
-
-
-    .play-again{
-
-        font-size: 25px;
-        padding: 20px 45px;
-        margin-top: 50px;
-
-    }
-
 }
-
-
-
-@media (max-width: 600px){
-
-
+@media(max-width:600px){
     body{
-
-        padding: 10px;
-        align-items: flex-start;
-
+        padding:10px;
+        align-items:flex-start;
     }
-
-
-
     .game{
-
-        width: 100%;
-        padding: 25px 15px;
-        border-radius: 25px;
-
+        width:100%;
+        padding:25px 15px;
+        border-radius:25px;
     }
-
-
-
     .logo{
-
-        font-size: 22px;
-
+        font-size:22px;
     }
-
-
-
     .logo-icon{
-
-        font-size: 55px;
-
+        font-size:55px;
     }
-
-
-
     h1{
-
-        font-size: 18px;
-
+        font-size:18px;
     }
-
-
-
     h2{
-
-        font-size: 22px;
-
+        font-size:22px;
     }
-
-
-
     .section-description{
-
-        font-size: 18px;
-
+        font-size:18px;
     }
-
-
-
     #instructions{
-
-        font-size: 14px;
-
+        font-size:14px;
     }
-
-
-
-    #timer{
-
-        font-size: 13px;
-        padding: 12px 20px;
-
-    }
-
-
-
     .ingredients-grid{
-
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 5px;
-
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
     }
-
-
-
     .ingredients-grid button{
-
-        height: 100px;
-        font-size: 16px;
-        border-radius: 15px;
-
+        height:100px;
+        font-size:16px;
     }
-
-
-
     .ingredients-grid button::before{
-
-        font-size: 30px;
-        margin-bottom: 5px;
-
+        font-size:30px;
     }
-
-
-
-    .start-button,
-    .make-button{
-
-        font-size: 15px;
-        padding: 12px 25px;
-
-    }
-
-
-
-    .play-again{
-
-        font-size: 18px;
-        padding: 15px 30px;
-        margin-top: 30px;
-
-    }
-
-
-
-    .glass-container{
-
-        margin-top: 40px;
-
-    }
-
-
-
     .glass{
-
-        width: 140px;
-        height: 140px;
-
+        width:140px;
+        height:140px;
     }
-
-
-
     .straw{
-
-        height: 160px;
-
+        height:160px;
     }
-
-
-
     .glass-shadow{
-
-        width: 140px;
-        margin-left: -145px;
-        margin-top: 140px;
-
+        width:140px;
+        margin-left:-145px;
+        margin-top:140px;
     }
-
-
-
+    .play-again{
+        font-size:18px;
+        padding:15px 30px;
+    }
     #message.message{
-
-        font-size: 25px;
-
+        font-size:25px;
     }
-
-
-
     .fruit{
-
-        font-size: 45px;
-        opacity: 0.3;
-
+        font-size:45px;
+        opacity:.3;
     }
-
 }
