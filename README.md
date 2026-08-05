@@ -1,10 +1,9 @@
-# juice-memory-game
+## Screenshot/Logo: 
+![Juice Memory game Screenshot](images/juice%20memory%20game%20screenshot.png)
+## Juice Memory Game: 
+Juice Memory Game is a memory based-cooking game where players need to memorize a random juice recipe made of five ingredinents for 5 seconds, then the ingredinets will disappear and then the player must recretae the juice by selecting the correct ingredients and in correct order.
 
-**what is the game?**
-- It's a memory game but in a cooking way not cards. The player should memoriaze the ingredients in 5s and then they will disapper from the player view, then the player should select the correct ingredeints in order. 
-
-**Is there a lose/win condition?**
-- yes, if the player selects the wrong ingredient once he will lose or if the timer runs out and if he selects all the ingredients correctly and in order before the time runs out the player wins. 
+I chose this idea because I wanted to create a fun and interactive memory game with a unique theme instead of the traditional card-matching games. 
 
 ### User Stories: 
 1. As a user, I should be able to see the instruction ***"How to play"*** before the game starts. 
@@ -23,13 +22,21 @@
 6. You win if you choose the correct ingredients in the ***correct order***.
 
 
-## Screenshot/Logo: 
-![Juice Memory game Screenshot](images/juice%20memory%20game%20screenshot.png)
-* Your game's name: Include a description of your game and what it does. Background info about the game and why you chose it is a nice touch.
-* Getting started: Include a link to your deployed game and any instructions you deem important. This should also contain a link to your planning materials.
-* Attributions: This section should include links to any external resources (such as libraries or assets) you used to develop your application that require attribution. You can exclude this section if it does not apply to your application.
-* Technologies used: List of the technologies used, for example: JavaScript, HTML, CSS, etc.
-* Next steps: Planned future enhancements (stretch goals).
+## Getting started: Include a link to your deployed game and any instructions you deem important. This should also contain a link to your planning materials.
+## Attributions: This section should include links to any external resources (such as libraries or assets) you used to develop your application that require attribution. You can exclude this section if it does not apply to your application.
+#### Emoji icons used from AI tools 
+#### Paster color palette inspiration: https://colorhunt.co/
+#### JavaScript reference: https://developer.mozilla.org/en-US/
+#### CSS reference: https://css-tricks.com/  
+#### Technologies used:
+HTML, CSS, JavaScript, Git and GitHub
+#### Next steps: 
+- Add different difficult levels
+- Add more ingredients and recipes
+- Add sound effects
+- Add a scoring system
+- Improve the user interface and gameplay experience
+
 
 
 
