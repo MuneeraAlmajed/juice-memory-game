@@ -237,12 +237,12 @@ h2{
 /* INGREDIENT CARDS */
 .ingredients-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 130px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 150px);
     gap: 10px;
     width: 100%;
     max-width: 100%;
-    margin-top: 30px;
+    margin-top: 50px;
     padding: 10px;
 }
 
@@ -494,48 +494,245 @@ h2{
     max-width: auto;
 }
 
-
 /* RESPONSIVE */
+
 @media (max-width: 900px){
+
     body{
-        padding: 10px;
+        padding: 15px;
     }
+
+
     .game{
-        width: 600px;
-        padding: 10px 15px;
+
+        width: 100%;
+        max-width: 700px;
+        min-height: auto;
+        padding: 30px 20px;
+
     }
+
 
     .ingredients-grid{
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
+        gap: 12px;
+
     }
+
+
+    .ingredients-grid button{
+
+        height: 120px;
+        font-size: 20px;
+
+    }
+
+
+    .fruit{
+
+        font-size: 70px;
+
+    }
+
+
+    .make-button{
+
+        font-size: 20px;
+        padding: 15px 25px;
+
+    }
+
+
+    .play-again{
+
+        font-size: 25px;
+        padding: 20px 45px;
+        margin-top: 50px;
+
+    }
+
 }
+
+
 
 @media (max-width: 600px){
 
-    .game{
-        padding: 30px 15px;
+
+    body{
+
+        padding: 10px;
+        align-items: flex-start;
+
     }
+
+
+
+    .game{
+
+        width: 100%;
+        padding: 25px 15px;
+        border-radius: 25px;
+
+    }
+
+
+
+    .logo{
+
+        font-size: 22px;
+
+    }
+
+
+
+    .logo-icon{
+
+        font-size: 55px;
+
+    }
+
+
 
     h1{
-        font-size: 40px;
+
+        font-size: 18px;
+
     }
+
+
 
     h2{
-        font-size: 35px;
+
+        font-size: 22px;
+
     }
 
-    .section-description,
-    #instructions{
-        font-size: 20px;
+
+
+    .section-description{
+
+        font-size: 18px;
+
     }
+
+
+
+    #instructions{
+
+        font-size: 14px;
+
+    }
+
+
+
+    #timer{
+
+        font-size: 13px;
+        padding: 12px 20px;
+
+    }
+
+
 
     .ingredients-grid{
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
+
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 5px;
+
     }
 
+
+
     .ingredients-grid button{
-        height: 120px;
+
+        height: 100px;
+        font-size: 16px;
+        border-radius: 15px;
+
     }
+
+
+
+    .ingredients-grid button::before{
+
+        font-size: 30px;
+        margin-bottom: 5px;
+
+    }
+
+
+
+    .start-button,
+    .make-button{
+
+        font-size: 15px;
+        padding: 12px 25px;
+
+    }
+
+
+
+    .play-again{
+
+        font-size: 18px;
+        padding: 15px 30px;
+        margin-top: 30px;
+
+    }
+
+
+
+    .glass-container{
+
+        margin-top: 40px;
+
+    }
+
+
+
+    .glass{
+
+        width: 140px;
+        height: 140px;
+
+    }
+
+
+
+    .straw{
+
+        height: 160px;
+
+    }
+
+
+
+    .glass-shadow{
+
+        width: 140px;
+        margin-left: -145px;
+        margin-top: 140px;
+
+    }
+
+
+
+    #message.message{
+
+        font-size: 25px;
+
+    }
+
+
+
+    .fruit{
+
+        font-size: 45px;
+        opacity: 0.3;
+
+    }
+
 }

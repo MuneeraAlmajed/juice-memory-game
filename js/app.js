@@ -295,6 +295,13 @@ function addIngredient(ingredient) {
 //render
 function render(){
     addIngredient(playerChoice);
+
+    // keep the selected card highlighted
+    const selectedButton = document.getElementById(playerChoice);
+
+    if(selectedButton){
+        selectedButton.classList.add("selected");
+    }
 }
 
 
@@ -314,8 +321,6 @@ const handleMove = (event) => {
 
     playerChoice = event.target.id;
     selectedIngredients.push(playerChoice);
-
-    event.target.classList.add("selected");
 
     console.log("player selected: ", playerChoice);
     console.log("All selected ingredient: ", selectedIngredients);
