@@ -1,99 +1,164 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* =========================
-   BODY
-========================= */
-body {
+
+/*body*/
+body{
     min-height: 100vh;
     padding: 30px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-        'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: rgba(255, 228, 196, 0.25);
     color: #514848;
     overflow-x: hidden;
     position: relative;
 }
-/* =========================
-   BACKGROUND FRUITS
-========================= */
-.background-fruits {
+
+.background-fruits{
     position: fixed;
     inset: 0;
     pointer-events: none;
     overflow: hidden;
     z-index: 0;
 }
-.fruit {
+
+.fruit{
     position: absolute;
     font-size: 100px;
-    opacity: 0.5;
+    opacity: 0.50;
     animation: floatingFruit 8s ease-in-out infinite;
 }
-.fruit-1 {
+
+.fruit-1{
     top: 8%;
     left: 15%;
+    transform: rotate(20deg);
 }
-.fruit-2 {
+
+.fruit-2{
     top: 15%;
     right: 8%;
     animation-delay: 2s;
 }
-.fruit-3 {
+
+.fruit-3{
     bottom: 15%;
     left: 15%;
     animation-delay: 4s;
+    transform: rotate(90deg);
 }
-.fruit-4 {
+
+.fruit-4{
     top: 50%;
     left: 5%;
     animation-delay: 1s;
 }
-.fruit-5 {
+
+.fruit-5{
     bottom: 9%;
     right: 9%;
     animation-delay: 3s;
 }
-.fruit-6 {
+
+.fruit-6{
     top: 45%;
     right: 20%;
-    animation-delay: 5s;
+    transform: rotate(90deg);
 }
+
 @keyframes floatingFruit {
-    0%,
-    100% {
+    0%, 100%{
         transform: translateY(0) rotate(-5deg);
     }
-    50% {
+
+    50%{
         transform: translateY(-25px) rotate(10deg);
     }
 }
-/* =========================
-   GAME CONTAINER
-========================= */
-.game {
+
+
+/* BUTTONS */
+.start-button{
+    background-color: #e89491;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
+    margin-top: 30px;
+    font-size: 15px;
+    padding: 15px 25px;
+    color: #69424a;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.start-button:hover{
+    background-color: aliceblue;
+    transition: 1s;
+}
+
+.play-again{
+    background-color: #e89491;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
+    margin-top: 135px;
+    font-size: 40px;
+    padding: 35px 90px;
+    color: #69424a;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.play-again:hover{
+    background-color: aliceblue;
+    transition: 1s;
+}
+
+.make-button{
+    background-color: #e89491;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
+    margin-top: 30px;
+    font-size: 30px;
+    padding: 15px 25px;
+    color: #69424a;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.make-button:hover{
+    background-color: aliceblue;
+    transition: 1s;
+}
+
+
+/* GAME */
+.game{
     width: 95%;
     max-width: 1200px;
     min-height: 85vh;
     padding: 50px 60px;
     position: relative;
     text-align: center;
-    background: rgba(255, 255, 255, 0.75);
-    border: 2px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255,255,255,0.75);
+    border: 2px solid rgba(255,255,255,0.8);
     border-radius: 40px;
-    box-shadow: 0 30px 80px rgba(100, 80, 80, 0.2);
+    box-shadow: 0 30px 80px;
     backdrop-filter: blur(20px);
     z-index: 1;
 }
-/* =========================
-   LOGO
-========================= */
-.logo {
+
+
+/* LOGO */
+.logo{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,49 +169,53 @@ body {
     font-style: italic;
     color: #e89491;
 }
-.logo-icon {
+
+.logo-icon{
     font-size: 80px;
     animation: logoBounce 2s infinite;
 }
+
 @keyframes logoBounce {
-    0%,
-    100% {
+    0%,100%{
         transform: rotate(-5deg);
     }
-    50% {
+
+    50%{
         transform: rotate(10deg) translateY(-4px);
     }
 }
-/* =========================
-   TITLES / TEXT
-========================= */
-h1 {
+
+
+/* TITLE */
+h1{
     margin-top: 20px;
     font-size: 15px;
     font-weight: normal;
     color: #845252;
 }
-h2 {
+
+h2{
     margin-top: 25px;
     font-size: 20px;
     font-weight: normal;
     font-style: italic;
+    font-display: swap;
     color: #845252;
 }
-.section-description {
+
+.section-description{
     margin-top: 20px;
     font-size: 25px;
     color: #8b7b7b;
 }
-#instructions {
+
+#instructions{
     margin-top: 20px;
     font-size: 15px;
     color: maroon;
 }
-/* =========================
-   TIMER
-========================= */
-#timer {
+
+#timer{
     margin-top: 20px;
     display: inline-block;
     padding: 15px 25px;
@@ -157,150 +226,117 @@ h2 {
     font-weight: bold;
     letter-spacing: 3px;
     box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
-    transition: 0.3s;
 }
-#timer:hover {
+
+#timer:hover{
     background-color: aliceblue;
+    transition: 1s;
 }
-/* =========================
-   BUTTONS
-========================= */
-.start-button,
-.make-button,
-.play-again {
-    background-color: #e89491;
-    border: none;
-    border-radius: 50px;
-    box-shadow: 0 5px 20px rgba(249, 8, 104, 0.476);
-    color: #69424a;
-    font-weight: bold;
-    letter-spacing: 2px;
-    display: inline-block;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.start-button {
-    margin-top: 30px;
-    font-size: 15px;
-    padding: 15px 25px;
-}
-.make-button {
-    margin-top: 30px;
-    font-size: 20px;
-    padding: 15px 25px;
-}
-.play-again {
-    margin-top: 80px;
-    font-size: 30px;
-    padding: 25px 60px;
-}
-.start-button:hover,
-.make-button:hover,
-.play-again:hover {
-    background-color: aliceblue;
-    transform: translateY(-3px);
-}
-/* =========================
-   INGREDIENT GRID
-========================= */
+
+
+/* INGREDIENT CARDS */
 .ingredients-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 130px);
     gap: 10px;
     width: 100%;
+    max-width: 100%;
     margin-top: 30px;
     padding: 10px;
 }
-/* =========================
-   INGREDIENT CARDS
-========================= */
+
 .ingredients-grid button {
     height: 140px;
     border: none;
     border-radius: 20px;
     background-color: white;
     color: #6d5e5e;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(100, 80, 80, 0.12);
     transition: 0.3s;
 }
-.ingredients-grid button:hover {
+
+.ingredients-grid button:hover{
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(100, 80, 80, 0.18);
 }
-.ingredients-grid button.selected {
+.ingredients-grid button.selected{
     background-color: #f8c8dc;
     box-shadow: 0 0 15px rgba(232, 148, 145, 0.8);
-    transform: translateY(-3px);
 }
-/* =========================
-   FRUIT EMOJIS
-========================= */
+
+
+/* FRUIT EMOJIS */
 .ingredients-grid button::before {
     display: block;
-    font-size: 40px;
+    font-size: 35px;
     margin-bottom: 10px;
 }
+
 #Orange::before {
     content: "🍊";
+
 }
+
 #Strawberry::before {
     content: "🍓";
 }
+
 #Apple::before {
     content: "🍎";
 }
+
 #Banana::before {
     content: "🍌";
 }
+
 #Blueberry::before {
     content: "🫐";
 }
+
 #Honey::before {
     content: "🍯";
 }
+
 #Lemon::before {
     content: "🍋";
 }
+
 #Milk::before {
     content: "🥛";
 }
+
 #Mango::before {
     content: "🥭";
 }
+
 #Watermelon::before {
     content: "🍉";
 }
+
 #Kiwi::before {
     content: "🥝";
 }
+
 #Ice::before {
     content: "🧊";
 }
-#water::before,
-#Water::before {
+
+#water::before {
     content: "💧";
 }
-/* =========================
-   JUICE AREA
-========================= */
-.juice-area {
-    margin-bottom: 40px;
-}
-/* =========================
-   GLASS CONTAINER
-========================= */
+
+
+/* CUP */
 .glass-container {
     position: relative;
     display: flex;
     justify-content: center;
     margin-top: 80px;
 }
-/* =========================
-   GLASS
-========================= */
+
 .glass {
     width: 180px;
     height: 180px;
@@ -311,11 +347,10 @@ h2 {
     border-radius: 10px 10px 50px 50px;
     background-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0 10px 25px rgba(80, 70, 80, 0.15);
-    z-index: 2;
 }
-/* =========================
-   STRAW
-========================= */
+
+
+/* STRAW */
 .straw {
     position: absolute;
     width: 12px;
@@ -323,12 +358,11 @@ h2 {
     background-color: #e89491;
     border-radius: 10px;
     top: -50px;
-    transform: translateX(-55px) rotate(-5deg);
-    z-index: 1;
+    margin-right: 110px;
 }
-/* =========================
-   JUICE
-========================= */
+
+
+/* JUICE */
 .juice {
     position: absolute;
     bottom: 0;
@@ -337,13 +371,15 @@ h2 {
     height: 0%;
     overflow: hidden;
     border-radius: 0 0 45px 45px;
-    transition:
-        height 0.8s ease,
-        background 1s ease;
+    transition: height 0.8s ease, background 1s ease;
 }
-/* =========================
-   INGREDIENTS INSIDE CUP
-========================= */
+
+.juice-area{
+    margin-bottom: 40px;
+}
+
+
+/* INGREDIENTS IN CUP */
 #ingredients-in-cup {
     position: absolute;
     bottom: 0;
@@ -352,8 +388,8 @@ h2 {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    z-index: 3;
 }
+
 .ingredient-in-cup {
     width: 90%;
     height: 22px;
@@ -362,47 +398,46 @@ h2 {
     opacity: 0.8;
     animation: drop 0.5s ease;
 }
-/* =========================
-   INGREDIENT DROP ANIMATION
-========================= */
+
+
+/* INGREDIENT ANIMATION */
 @keyframes drop {
     from {
         transform: translateY(-50px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
     }
 }
-/* =========================
-   GLASS HIGHLIGHT
-========================= */
+
+
+/* GLASS SHINE */
 .glass-highlight {
     position: absolute;
     top: 20px;
-    left: 8px;
+    left: 0px;
     width: 12px;
     height: 140px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.5);
-    z-index: 5;
-    pointer-events: none;
 }
-/* =========================
-   GLASS SHADOW
-========================= */
+
+
+/* GLASS SHADOW */
 .glass-shadow {
-    position: absolute;
     width: 180px;
     height: 15px;
-    bottom: -10px;
+    margin-left: -186px;
+    margin-top: 180px;
     border-radius: 50%;
     background-color: rgba(80, 60, 70, 0.15);
 }
-/* =========================
-   BUBBLES
-========================= */
+
+
+/* BUBBLES */
 .bubble {
     position: absolute;
     width: 8px;
@@ -410,165 +445,97 @@ h2 {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.6);
     animation: bubbles 3s infinite;
-    z-index: 4;
 }
+
 .bubble-1 {
     left: 25%;
     bottom: 10%;
 }
+
 .bubble-2 {
     left: 50%;
     bottom: 20%;
     animation-delay: 1s;
 }
+
 .bubble-3 {
     left: 70%;
     bottom: 15%;
     animation-delay: 2s;
 }
-/* =========================
-   BUBBLE ANIMATION
-========================= */
+
+
+/* BUBBLE ANIMATION */
 @keyframes bubbles {
+
     0% {
         transform: translateY(0);
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         transform: translateY(-120px);
         opacity: 0;
     }
 }
-/* =========================
-   GAME MESSAGE
-========================= */
-#message,
-#message.message {
+
+
+#message.message{
     margin-top: 20px;
     font-size: 40px;
     color: #5d4949;
     font-weight: normal;
     font-style: italic;
     letter-spacing: 2px;
-    width: 100%;
+    max-width: auto;
 }
-/* =========================
-   TABLET RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-    body {
+
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+    body{
         padding: 10px;
     }
-    .game {
-        width: 95%;
-        padding: 30px 20px;
+    .game{
+        width: 600px;
+        padding: 10px 15px;
     }
-    .ingredients-grid {
-        grid-template-columns: repeat(3, 1fr);
+
+    .ingredients-grid{
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
     }
-    .ingredients-grid button {
-        height: 130px;
-    }
-    .fruit {
-        font-size: 70px;
-    }
 }
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-        align-items: flex-start;
-    }
-    .game {
-        width: 100%;
+
+@media (max-width: 600px){
+
+    .game{
         padding: 30px 15px;
-        border-radius: 25px;
     }
-    .logo {
-        font-size: 22px;
-        letter-spacing: 2px;
+
+    h1{
+        font-size: 40px;
     }
-    .logo-icon {
-        font-size: 55px;
-    }
-    h1 {
-        font-size: 20px;
-    }
-    h2 {
-        font-size: 24px;
-    }
-    .section-description {
-        font-size: 20px;
-    }
-    #instructions {
-        font-size: 16px;
-    }
-    #timer {
-        font-size: 14px;
-        padding: 12px 18px;
-    }
-    .ingredients-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-        padding: 5px;
-    }
-    .ingredients-grid button {
-        height: 120px;
-        font-size: 16px;
-    }
-    .ingredients-grid button::before {
+
+    h2{
         font-size: 35px;
     }
-    .glass-container {
-        margin-top: 60px;
+
+    .section-description,
+    #instructions{
+        font-size: 20px;
     }
-    .glass {
-        width: 160px;
-        height: 170px;
+
+    .ingredients-grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
     }
-    .glass-shadow {
-        width: 160px;
-    }
-    .make-button {
-        font-size: 17px;
-        padding: 13px 20px;
-    }
-    .play-again {
-        margin-top: 50px;
-        font-size: 22px;
-        padding: 20px 40px;
-    }
-    #message,
-    #message.message {
-        font-size: 25px;
-    }
-    .fruit {
-        font-size: 55px;
-        opacity: 0.3;
-    }
-}
-/* =========================
-   VERY SMALL SCREENS
-========================= */
-@media (max-width: 400px) {
-    .ingredients-grid {
-        gap: 8px;
-    }
-    .ingredients-grid button {
-        height: 105px;
-        font-size: 14px;
-    }
-    .ingredients-grid button::before {
-        font-size: 30px;
-        margin-bottom: 5px;
-    }
-    .game {
-        padding: 25px 10px;
+
+    .ingredients-grid button{
+        height: 120px;
     }
 }
