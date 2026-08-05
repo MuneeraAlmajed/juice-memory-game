@@ -524,6 +524,10 @@ h2{
     h2{
         font-size: 35px;
     }
+    .ingredients-grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
 
     .section-description,
     #instructions{
