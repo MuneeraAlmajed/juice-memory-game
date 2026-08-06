@@ -22,14 +22,24 @@ I chose this idea because I wanted to create a fun and interactive memory game w
 6. You win if you choose the correct ingredients in the ***correct order***.
 
 
-## Getting started: Include a link to your deployed game and any instructions you deem important. This should also contain a link to your planning materials.
-## Attributions: This section should include links to any external resources (such as libraries or assets) you used to develop your application that require attribution. You can exclude this section if it does not apply to your application.
-#### Emoji icons used from AI tools 
-#### Paster color palette inspiration: https://colorhunt.co/
-#### JavaScript reference: https://developer.mozilla.org/en-US/
-#### CSS reference: https://css-tricks.com/  
-#### Technologies used:
-HTML, CSS, JavaScript, Git and GitHub
+## Getting started: 
+[Play the Juice Memory Game](https://muneeraalmajed.github.io/juice-memory/)
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Git
+- GitHub
+
+## Attributions
+
+- Emoji icons generated using AI tools.
+- Pastel color palette inspired by [Color Hunt](https://colorhunt.co/).
+- JavaScript documentation: [MDN Web Docs](https://developer.mozilla.org/en-US/).
+- CSS reference: [CSS-Tricks](https://css-tricks.com/).
+
 #### Next steps: 
 - Add different difficult levels
 - Add more ingredients and recipes

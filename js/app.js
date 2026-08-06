@@ -70,8 +70,6 @@ const secHead = document.querySelector(".section-header");
 
 //start game
 function startGame(){
-    console.log("the game is started");
-
     fiveIngredients = [];
     selectedIngredients = [];
 
@@ -114,8 +112,6 @@ function startGame(){
         //hide them
         ingContainer.innerHTML = "";
 
-        console.log("ingredients are hidden!");
-
         //display all the ingredients for the player
         for(const allIngredients of ingredients){
             const ingButton = document.createElement("button");
@@ -127,7 +123,6 @@ function startGame(){
 
             ingContainer.appendChild(ingButton);
         }
-        console.log("Choose your ingredients!");
 
     },5000);
 
@@ -138,7 +133,6 @@ function startGame(){
 
 //play again
 function playAgain(){
-    console.log("you can play again");
 
     // Clear previous game
     selectedIngredients = [];
@@ -161,9 +155,7 @@ function playAgain(){
 
 //make juice
 function makeJuice(){
-    console.log("Juice is made!");
-
-
+    
     const isCorrect =
         fiveIngredients.length === selectedIngredients.length &&
         fiveIngredients.every((ingredient, index) =>
@@ -212,8 +204,6 @@ function makeJuice(){
     //show pplay agin button
     playAgainButton.style.display = "inline-block";
 
-
-    console.log("Result screen displayed!");
 }
 
 //player choice
@@ -225,9 +215,7 @@ const getPlayerChoice = (event) => {
 
     //Add ingredient to cup
     addIngredient(playerChoice);
-    
-    console.log("player selected: ", playerChoice);
-    console.log("All selected ingredient: ",selectedIngredients);
+
 };
 
 //computer random ingredients
@@ -237,7 +225,6 @@ const getRandomIng = () =>{
     for(i = 0; i<5;i++){
     const randomIndex = Math.floor(Math.random() * ingredients.length);
     const randomIng = ingredients[randomIndex];
-    console.log("ingredinets: " +randomIng);
 
     // check if ingredients is already selected
     if(!fiveIngredients.includes(randomIng)){
@@ -316,10 +303,6 @@ const handleMove = (event) => {
     selectedIngredients.push(playerChoice);
 
     event.target.classList.add("selected");
-
-    console.log("player selected: ", playerChoice);
-    console.log("All selected ingredient: ", selectedIngredients);
-
     
     render();
 };
