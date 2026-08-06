@@ -232,7 +232,6 @@ h2{
     border-radius: 0 0 45px 45px;
     transition: height 0.8s ease, background 1s ease;
 }
-
 /*ingredients layers inside cup*/
 #ingredients-in-cup{
     position: absolute;
