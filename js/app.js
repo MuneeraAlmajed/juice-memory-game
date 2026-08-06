@@ -285,7 +285,7 @@ function render(){
 }
 
 
-/*----------- Event Listeners ----------*/
+/*----------- Event Listeners ---------*/
 
 // Start button
 startButton.addEventListener("click", startGame);
