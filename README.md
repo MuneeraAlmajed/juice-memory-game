@@ -23,7 +23,7 @@ I chose this idea because I wanted to create a fun and interactive memory game w
 
 
 ## Getting started: 
-[Play the Juice Memory Game](https://muneeraalmajed.github.io/juice-memory/)
+[Play the Juice Memory Game](https://muneeraalmajed.github.io/juice-memory-game/)
 
 ## Technologies Used
 
