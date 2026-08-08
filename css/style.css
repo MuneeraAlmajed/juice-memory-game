@@ -222,7 +222,6 @@ h2{
     
 }
 
-/*juice inside glass*/
 .juice{
     position: absolute;
     bottom:0;
@@ -232,7 +231,7 @@ h2{
     border-radius: 0 0 45px 45px;
     transition: height 0.8s ease, background 1s ease;
 }
-/*ingredients layers inside cup*/
+
 #ingredients-in-cup{
     position: absolute;
     bottom: 0;
@@ -262,16 +261,7 @@ h2{
     }
 
 }
-/* BUBBLES */
 
-.bubble{
-    position:absolute;
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:rgba(255,255,255,0.6);
-    animation:bubbles 3s infinite;
-}
 /* BUBBLES */
 .bubble{
     position:absolute;
@@ -330,13 +320,11 @@ h2{
     left:15%;
 }
 
-
 .fruit-2{
     top:15%;
     right:8%;
-    animation-delay:2s;
+   animation-delay:2s;
 }
-
 
 .fruit-3{
     bottom:15%;
@@ -344,21 +332,17 @@ h2{
     animation-delay:4s;
 }
 
-
 .fruit-4{
     top:50%;
     left:5%;
     animation-delay:1s;
 }
 
-
 .fruit-5{
     bottom:10%;
     right:10%;
     animation-delay:3s;
 }
-
-
 .fruit-6{
     top:45%;
     right:20%;
@@ -373,7 +357,7 @@ h2{
     }
 }
 
-/* RESPONSIVE TABLET */
+/* RESPONSIVE */
 @media(max-width:900px){
 
     body{
